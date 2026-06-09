@@ -117,8 +117,6 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
   background-color: #f1ece8;
   color: #efede6;
-  display: none;
-  opacity: 0;
 }
 
 /* music */
@@ -368,7 +366,7 @@ header {
 }
 .our-story .content {
   aspect-ratio: 500/1625;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/bg_blur.webp") no-repeat bottom/100%;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/bg_blur.jpg") no-repeat bottom/100%;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -386,7 +384,7 @@ header {
   border-radius: 10px;
 }
 .our-story .content .couple-hero .image {
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-808-1.webp") no-repeat center/cover;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-808-1.jpg") no-repeat center/cover;
   max-width: 98%;
   width: 100%;
   aspect-ratio: 394/517;
@@ -460,12 +458,12 @@ header {
   aspect-ratio: 164/218;
 }
 .our-story .content .memory.memory-left .photo.photo1 {
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-551.webp") no-repeat center/cover;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-551.jpg") no-repeat center/cover;
   top: 0;
   left: 28%;
 }
 .our-story .content .memory.memory-left .photo.photo2 {
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-642.webp") no-repeat center/cover;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-642.jpg") no-repeat center/cover;
   bottom: 0;
   left: 0;
 }
@@ -481,7 +479,7 @@ header {
   max-width: 215px;
   aspect-ratio: 215/168;
   right: 0;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-815.webp") no-repeat 100% 38%/100%;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-815.jpg") no-repeat 100% 38%/100%;
 }
 .our-story .content .memory.memory-right .memory-content {
   bottom: 28%;
@@ -536,7 +534,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-703-1.webp") no-repeat 44% 77%/140%;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-703-1.jpg") no-repeat 44% 77%/140%;
 }
 .couple-photo02 .content .logo {
   max-width: 36px;
@@ -635,12 +633,12 @@ header {
   width: 100%;
 }
 .gallery .content .gallery.gallery-1 {
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-342.webp") no-repeat 100% 97%/100%;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-342.jpg") no-repeat 100% 97%/100%;
   max-width: 308px;
   background-color: #b4b3a8;
 }
 .gallery .content .gallery.gallery-2 {
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-744.webp") no-repeat center/cover;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-744.jpg") no-repeat center/cover;
   max-width: 182px;
   background-color: #b4b3a8;
 }
