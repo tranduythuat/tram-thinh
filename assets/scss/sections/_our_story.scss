@@ -38,7 +38,7 @@
                 margin-top: 10%;
                 font-family: $font-PinyonScript;
                 color: $text-color-01;
-                font-size: 36px;
+                font-size: 38px;
                 transform: rotate(-5deg);
             }
         }
@@ -58,14 +58,14 @@
 
             .subtitle {
                 font-family: $font-gothamBold;
-                font-size: 11px;
+                font-size: 13px;
                 margin-bottom: 4%;
                 text-transform: uppercase;
             }
 
             .subtext {
                 font-family: $font-gotham;
-                font-size: 11px;
+                font-size: 13px;
                 margin-bottom: 12%;
             }
         }
@@ -87,7 +87,7 @@
                     display: inline-block;
                     text-transform: uppercase;
                     font-family: $font-gotham;
-                    font-size: 11px;
+                    font-size: 13px;
                     background-color: #efede6ff;
                     color: $text-color-01;
                     line-height: 1;
@@ -97,8 +97,8 @@
 
                 p {
                     font-family: $font-gotham;
-                    font-size: 11px;
-                    letter-spacing: 1.1px;
+                    font-size: 13px;
+                    // letter-spacing: 1.1px;
                 }
             }
 
@@ -125,8 +125,8 @@
                 }
 
                 .memory-content {
-                    bottom: 2%;
-                    left: 40%;
+                    bottom: 0%;
+                    left: 39%;
                 }
             }
 
@@ -165,7 +165,7 @@
                 }
 
                 .title {
-                    font-size: calc((36 / 500) * 100vw);
+                    font-size: calc((38 / 500) * 100vw);
                 }
             }
 
@@ -177,7 +177,7 @@
                 }
     
                 .subtitle, .subtext {
-                    font-size: calc((11 / 500) * 100vw);
+                    font-size: calc((13 / 500) * 100vw);
                 }
             }
 
@@ -188,11 +188,11 @@
 
                 .memory-content {
                     .label {
-                        font-size: calc((11 / 500) * 100vw);
+                        font-size: calc((13 / 500) * 100vw);
                     }
 
                     p {
-                        font-size: calc((11/ 500) * 100vw);
+                        font-size: calc((13 / 500) * 100vw);
                         letter-spacing: calc((1.1/ 500) * 100vw);
                     }
                 }

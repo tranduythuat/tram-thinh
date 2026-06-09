@@ -85,7 +85,7 @@
 
 body {
   background-color: rgb(255, 255, 255);
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   overflow-x: hidden;
   display: flex;
@@ -139,7 +139,7 @@ section {
   right: -23%;
   width: 105%;
   font-family: "SVN-GothamBook", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   background-color: rgb(100, 137, 130);
   color: antiquewhite;
   padding: 3% 5% 5% 20%;
@@ -165,7 +165,7 @@ section {
 
 @media (max-width: 500px) {
   body {
-    font-size: 2.4vw;
+    font-size: 2.8vw;
   }
   .music-box {
     bottom: 2vw;
@@ -174,7 +174,7 @@ section {
     width: 18vw;
   }
   .music-box .label span {
-    font-size: 2.4vw;
+    font-size: 2.8vw;
   }
   .music-box .player {
     max-width: 11vw;
@@ -333,7 +333,7 @@ header {
   margin-bottom: 2%;
 }
 .hero .content .couple-name {
-  font-size: 36px;
+  font-size: 38px;
   font-family: "PinyonScript", sans-serif;
 }
 .hero .content .photo-frame {
@@ -343,7 +343,7 @@ header {
   max-width: 237px;
 }
 .hero .content .forever {
-  font-size: 22px;
+  font-size: 24px;
   font-family: "PinyonScript", sans-serif;
 }
 @media (max-width: 500px) {
@@ -351,13 +351,13 @@ header {
     max-width: 14.8vw;
   }
   .hero .content .couple-name {
-    font-size: 7.2vw;
+    font-size: 7.6vw;
   }
   .hero .content .photo-frame img {
     max-width: 47.4vw;
   }
   .hero .content .forever {
-    font-size: 4.4vw;
+    font-size: 4.8vw;
   }
 }
 
@@ -396,7 +396,7 @@ header {
   margin-top: 10%;
   font-family: "PinyonScript", sans-serif;
   color: #393934;
-  font-size: 36px;
+  font-size: 38px;
   transform: rotate(-5deg);
 }
 .our-story .content .story {
@@ -412,13 +412,13 @@ header {
 }
 .our-story .content .story .subtitle {
   font-family: "SVN-gothamBold", sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   margin-bottom: 4%;
   text-transform: uppercase;
 }
 .our-story .content .story .subtext {
   font-family: "SVN-GothamBook", sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   margin-bottom: 12%;
 }
 .our-story .content .memory {
@@ -436,7 +436,7 @@ header {
   display: inline-block;
   text-transform: uppercase;
   font-family: "SVN-GothamBook", sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   background-color: #efede6;
   color: #393934;
   line-height: 1;
@@ -445,8 +445,7 @@ header {
 }
 .our-story .content .memory .memory-content p {
   font-family: "SVN-GothamBook", sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.1px;
+  font-size: 13px;
 }
 .our-story .content .memory.memory-left {
   aspect-ratio: 500/325;
@@ -468,8 +467,8 @@ header {
   left: 0;
 }
 .our-story .content .memory.memory-left .memory-content {
-  bottom: 2%;
-  left: 40%;
+  bottom: 0%;
+  left: 39%;
 }
 .our-story .content .memory.memory-right {
   aspect-ratio: 500/168;
@@ -498,22 +497,22 @@ header {
     border-radius: 2vw;
   }
   .our-story .content .couple-hero .title {
-    font-size: 7.2vw;
+    font-size: 7.6vw;
   }
   .our-story .content .story .logo img {
     max-width: 7.2vw;
   }
   .our-story .content .story .subtitle, .our-story .content .story .subtext {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
   .our-story .content .memory .photo {
     border: 1.2vw solid #efede6;
   }
   .our-story .content .memory .memory-content .label {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
   .our-story .content .memory .memory-content p {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
     letter-spacing: 0.22vw;
   }
   .our-story .content .memory.memory-left .photo {
@@ -562,7 +561,7 @@ header {
 }
 .timeline .content .title {
   font-family: "PinyonScript", sans-serif;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 300;
   margin-top: 12%;
 }
@@ -577,27 +576,27 @@ header {
 }
 .timeline .content .timeline .event h3 {
   font-family: "SVN-gothamBold", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
 }
 .timeline .content .timeline .event .location {
   font-family: "SVN-GothamBook", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
 }
 .timeline .content .timeline .event .detail {
   margin-top: 4%;
   font-family: "SVN-GothamLightItalic", sans-serif;
-  font-size: 11px;
+  font-size: 13px;
 }
 .timeline .content .timeline .event.engagement {
   top: 40%;
-  left: 48%;
+  left: 50%;
 }
 .timeline .content .timeline .event.wedding {
-  top: 58%;
-  left: 15%;
+  top: 56%;
+  left: 12%;
 }
 .timeline .content .timeline .event.party {
-  top: 76%;
+  top: 75%;
   left: 56%;
 }
 @media (max-width: 500px) {
@@ -605,16 +604,16 @@ header {
     background-size: 22.4vw;
   }
   .timeline .content .title {
-    font-size: 7.2vw;
+    font-size: 7.6vw;
   }
   .timeline .content .timeline .event .flower img {
     max-width: 6.4vw;
   }
   .timeline .content .timeline .event h3, .timeline .content .timeline .event .location {
-    font-size: 3vw;
+    font-size: 3.4vw;
   }
   .timeline .content .timeline .event .detail {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
 }
 
@@ -670,12 +669,12 @@ header {
 }
 .dresscode .content h2 {
   font-family: "PinyonScript", sans-serif;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 300;
   margin-top: 5%;
 }
 .dresscode .content .subtext {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "SVN-GothamBook", sans-serif;
   line-height: 1.8;
@@ -701,7 +700,7 @@ header {
   max-width: 34px;
 }
 .dresscode .content .colors-grid .item .label {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 10%;
   font-family: "SVN-GothamBook", sans-serif;
   text-transform: uppercase;
@@ -717,16 +716,16 @@ header {
     max-width: 7vw;
   }
   .dresscode .content h2 {
-    font-size: 7.2vw;
+    font-size: 7.6vw;
   }
   .dresscode .content .subtext {
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
   .dresscode .content .colors-grid .item .color img {
     max-width: 6.8vw;
   }
   .dresscode .content .colors-grid .item .label {
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
   .dresscode .content .divider2 img {
     max-width: 34.8vw;
@@ -757,7 +756,7 @@ header {
 }
 .upload .content .title {
   font-family: "PinyonScript", sans-serif;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 300;
   margin-bottom: 5%;
 }
@@ -768,7 +767,7 @@ header {
   max-width: 10px;
 }
 .upload .content .subtext {
-  font-size: 11px;
+  font-size: 13px;
   font-family: "SVN-GothamBook", sans-serif;
   margin-bottom: 5%;
   text-transform: uppercase;
@@ -780,12 +779,12 @@ header {
 .upload .content .upload-btn {
   font-family: "SVN-gothamBold", sans-serif;
   display: block;
-  width: 27%;
+  width: 50%;
   padding: 2% 0 1.6%;
   background-color: #efede6;
   color: #393934;
   border: none;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
   cursor: pointer;
   border-radius: 8px;
@@ -797,23 +796,23 @@ header {
 }
 .upload .content .small-note {
   font-family: "ICIELBCOLDSTYLE", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 500px) {
   .upload .content .hero-img img {
     max-width: 50.8vw;
   }
   .upload .content .title {
-    font-size: 8vw;
+    font-size: 8.4vw;
   }
   .upload .content .divider img {
     max-width: 2vw;
   }
   .upload .content .subtext {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
   .upload .content .upload-btn {
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
 }
 
@@ -822,7 +821,7 @@ header {
 }
 .rsvp .content {
   width: 100%;
-  aspect-ratio: 500/664;
+  aspect-ratio: 500/720;
   perspective: 1000px;
   position: relative;
   font-family: "SVN-GothamBook", sans-serif;
@@ -840,17 +839,17 @@ header {
 }
 .rsvp .content .rsvp-form {
   display: block;
-  padding: 0 12%;
+  padding: 0 8%;
 }
 .rsvp .content .rsvp-form .header .title {
   font-family: "PinyonScript", sans-serif;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 300;
   margin-bottom: 5%;
   color: #393934;
 }
 .rsvp .content .rsvp-form .header .subtitle {
-  font-size: 11px;
+  font-size: 13px;
   font-family: "SVN-GothamBook", sans-serif;
   line-height: 1.5;
   margin-bottom: 3%;
@@ -881,7 +880,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   font-family: inherit;
   height: 100%;
@@ -913,7 +912,7 @@ header {
   padding: 2% 4%;
   border-radius: 8px;
   background: #d0c9b7;
-  font-size: 11px;
+  font-size: 13px;
   outline: none;
   border: none;
   line-height: 1;
@@ -936,11 +935,11 @@ header {
   /* Cho phép hiển thị xuống dòng trong placeholder */
 }
 .rsvp .content .rsvp-form .form-group .guest-info-title {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 2%;
 }
 .rsvp .content .rsvp-form .form-group .subtitle {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 3%;
 }
@@ -950,7 +949,7 @@ header {
   padding: 1.6% 3%;
   border-radius: 25px;
   background: transparent;
-  font-size: 12px;
+  font-size: 14px;
   color: #efede6;
   outline: none;
   border: 2px solid #efede6;
@@ -958,7 +957,7 @@ header {
   cursor: pointer;
 }
 .rsvp .content .rsvp-form .form-group .wish-label {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 3%;
 }
 .rsvp .content .rsvp-form .form-group.confirm,
@@ -981,7 +980,7 @@ header {
   border: none;
   border-radius: 8px;
   font-weight: 300;
-  font-size: 10px;
+  font-size: 12px;
   cursor: pointer;
   text-transform: uppercase;
   transition: background 0.3s ease;
@@ -997,20 +996,20 @@ header {
 .rsvp label {
   display: block;
   margin-bottom: 2%;
-  font-size: 9.11px;
+  font-size: 11.11px;
 }
 .rsvp .text-size-10 {
-  font-size: 9.11px;
+  font-size: 11.11px;
 }
 .rsvp .text-size-8 {
-  font-size: 8px;
+  font-size: 10px;
 }
 @media (max-width: 500px) {
   .rsvp .content .rsvp-form .header .title {
-    font-size: 7.2vw;
+    font-size: 7.6vw;
   }
   .rsvp .content .rsvp-form .header .subtitle {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
   .rsvp .content .rsvp-form .divider img {
     max-width: 2vw;
@@ -1019,28 +1018,28 @@ header {
     height: 6.4vw;
   }
   .rsvp .content .rsvp-form .button-group .radio-label {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
   .rsvp .content .rsvp-form .form-group input[type=text],
   .rsvp .content .rsvp-form .form-group input[type=number],
   .rsvp .content .rsvp-form .form-group textarea,
   .rsvp .content .rsvp-form .form-group .form-select {
-    font-size: 2.2vw;
+    font-size: 2.6vw;
   }
   .rsvp .content .rsvp-form .form-group .guest-info-title {
-    font-size: 3vw;
+    font-size: 3.4vw;
   }
   .rsvp .content .rsvp-form .form-group .wish-label {
-    font-size: 2.8vw;
+    font-size: 3.2vw;
   }
   .rsvp .content .rsvp-form .form-group .subtitle {
-    font-size: 2.4vw;
-  }
-  .rsvp .content .rsvp-form .form-group.dietary p.subtitle {
     font-size: 2.8vw;
   }
+  .rsvp .content .rsvp-form .form-group.dietary p.subtitle {
+    font-size: 3.2vw;
+  }
   .rsvp .content .rsvp-form .submit-btn {
-    font-size: 2.54vw;
+    font-size: 2.94vw;
   }
 }
 
@@ -1058,7 +1057,7 @@ header {
   color: #393934;
 }
 .end .content .text-main {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.3;
   margin-top: 8%;
   text-align-last: center;
@@ -1067,12 +1066,12 @@ header {
   line-height: 1.5;
 }
 .end .content .end-text {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 3%;
 }
 @media (max-width: 500px) {
   .end .content .text-main, .end .content .end-text {
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
 }
 
@@ -1100,12 +1099,12 @@ header {
 }
 .letter-section .content .subtext {
   font-family: "HLTJaneAusten", sans-serif;
-  font-size: 19px;
+  font-size: 21px;
   text-align: center;
 }
 @media (max-width: 500px) {
   .letter-section .content .subtext {
-    font-size: 3.8vw;
+    font-size: 4.2vw;
   }
 }
 

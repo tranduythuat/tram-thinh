@@ -9,7 +9,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
     overflow-x: hidden;
     @include flex-center;
@@ -61,7 +61,7 @@ section {
             right: -23%;
             width: 105%;
             font-family: $font-gotham;
-            font-size: 12px;
+            font-size: 14px;
             background-color: rgb(100, 137, 130);
             color: antiquewhite;
             padding: 3% 5% 5% 20%;
@@ -103,14 +103,14 @@ section {
 
 @media (max-width: 500px) {
     body {
-        font-size: calc((12 / 500) * 100vw);;
+        font-size: calc((14 / 500) * 100vw);;
     }
     .music-box {
         bottom: calc((10 / 500) * 100vw);
         .label {
             width: calc((90 / 500) * 100vw);
             span {
-                font-size: calc((12 / 500) * 100vw);
+                font-size: calc((14 / 500) * 100vw);
             }
         }
         .player {

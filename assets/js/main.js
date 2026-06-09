@@ -64,7 +64,7 @@
       scrollTrigger: {
         trigger: ".colors-grid",
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
 

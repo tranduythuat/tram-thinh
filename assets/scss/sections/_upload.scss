@@ -25,7 +25,7 @@
         
         .title {
             font-family: $font-PinyonScript;
-            font-size: 40px;
+            font-size: 42px;
             font-weight: 300;
             margin-bottom: 5%;
         }
@@ -37,7 +37,7 @@
             }
         }
         .subtext {
-            font-size: 11px;
+            font-size: 13px;
             font-family: $font-gotham;
             margin-bottom: 5%;
             text-transform: uppercase;
@@ -49,12 +49,12 @@
         .upload-btn {
             font-family: $font-gothamBold;
             display: block;
-            width: 27%;
+            width: 50%;
             padding: 2% 0 1.6%;
             background-color: $text-color;
             color: $text-color-01;
             border: none;
-            font-size: 10px;
+            font-size: 12px;
             letter-spacing: 1px;
             cursor: pointer;
             border-radius: 8px;
@@ -66,7 +66,7 @@
         }
         .small-note {
             font-family: $font-ICIELBCOLDSTYLE;
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
@@ -79,7 +79,7 @@
             }
 
             .title {
-                font-size: calc((40 / 500) * 100vw);
+                font-size: calc((42 / 500) * 100vw);
             }
             .divider {
                 img {
@@ -87,10 +87,10 @@
                 }
             }
             .subtext {
-                font-size: calc((11 / 500) * 100vw);
+                font-size: calc((13 / 500) * 100vw);
             }
             .upload-btn {
-                font-size: calc((10 / 500) * 100vw);
+                font-size: calc((12 / 500) * 100vw);
             }
         }
     }

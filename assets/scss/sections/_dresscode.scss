@@ -19,13 +19,13 @@
         }
         h2 {
             font-family: $font-PinyonScript;
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 300;
             margin-top: 5%;
         }
 
         .subtext {
-            font-size: 10px;
+            font-size: 12px;
             text-transform: uppercase;
             font-family: $font-gotham;
             line-height: 1.8;
@@ -51,7 +51,7 @@
                 }
 
                 .label {
-                    font-size: 10px;
+                    font-size: 12px;
                     margin-top: 10%;
                     font-family: $font-gotham;
                     text-transform: uppercase;
@@ -76,11 +76,11 @@
             }
 
             h2 {
-                font-size: calc((36 / 500) * 100vw);
+                font-size: calc((38 / 500) * 100vw);
             }
 
             .subtext {
-                font-size: calc((10 / 500) * 100vw);
+                font-size: calc((12 / 500) * 100vw);
             }
 
             .colors-grid {
@@ -92,7 +92,7 @@
                     }
     
                     .label {
-                        font-size: calc((10 / 500) * 100vw);
+                        font-size: calc((12 / 500) * 100vw);
                     }
                 }
             }

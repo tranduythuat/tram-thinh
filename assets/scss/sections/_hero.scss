@@ -30,7 +30,7 @@
         }
 
         .couple-name {
-            font-size: 36px;
+            font-size: 38px;
             font-family: $font-PinyonScript;
         }
         .photo-frame {
@@ -41,7 +41,7 @@
         }
             
         .forever{
-            font-size: 22px;
+            font-size: 24px;
             font-family: $font-PinyonScript;
         }
     }
@@ -53,7 +53,7 @@
             }
     
             .couple-name {
-                font-size: calc((36 / 500) * 100vw);
+                font-size: calc((38 / 500) * 100vw);
             }
             .photo-frame {
                 img {
@@ -62,7 +62,7 @@
             }
                 
             .forever{
-                font-size: calc((22 / 500) * 100vw);
+                font-size: calc((24 / 500) * 100vw);
             }
         }
     }

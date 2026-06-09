@@ -9,7 +9,7 @@
         background-color: $primary-color;
         h2 {
             font-family: $font-Bellamy-Stevenson;
-            font-size: 54px;
+            font-size: 56px;
             font-weight: 300;
             color: $text-color;
             margin: 5% 0 7%
@@ -46,12 +46,12 @@
         .content {
 
             h2 {
-                font-size: calc((54 / 500) * 100vw);
+                font-size: calc((56 / 500) * 100vw);
             }
             .swiper {
                 .swiper-button-next:after, 
                 .swiper-button-prev:after {
-                    font-size: calc((44 / 500) * 100vw);
+                    font-size: calc((46 / 500) * 100vw);
                 }
 
                 .swiper-pagination-bullet {

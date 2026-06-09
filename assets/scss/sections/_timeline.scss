@@ -16,7 +16,7 @@
         position: relative;
         .title {
             font-family: $font-PinyonScript;
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 300;
             margin-top: 12%;
         }
@@ -32,29 +32,29 @@
                 }
                 h3 {
                     font-family: $font-gothamBold;
-                    font-size: 15px;
+                    font-size: 17px;
                 }
                 .location {
                     font-family: $font-gotham;
-                    font-size: 15px;
+                    font-size: 17px;
                 }
                 .detail {
                     margin-top: 4%;
                     font-family: $font-GothamLightItalic;
-                    font-size: 11px;
+                    font-size: 13px;
                 }
 
                 &.engagement {
                     top: 40%;
-                    left: 48%;
+                    left: 50%;
                 }
 
                 &.wedding {
-                    top: 58%;
-                    left: 15%;
+                    top: 56%;
+                    left: 12%;
                 }
                 &.party {
-                    top: 76%;
+                    top: 75%;
                     left: 56%;
                 }
             }
@@ -65,7 +65,7 @@
         .content {
             background-size: calc((112 / 500) * 100vw);
             .title {
-                font-size: calc((36 / 500) * 100vw);
+                font-size: calc((38 / 500) * 100vw);
             }
     
             .timeline {
@@ -76,10 +76,10 @@
                         }
                     }
                     h3, .location {
-                        font-size: calc((15 / 500) * 100vw);
+                        font-size: calc((17 / 500) * 100vw);
                     }
                     .detail {
-                        font-size: calc((11 / 500) * 100vw);
+                        font-size: calc((13 / 500) * 100vw);
                     }
                 }
             }

@@ -11,7 +11,7 @@ function gsapFlipIn(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });
@@ -23,7 +23,7 @@ function gsapFlipInThenYoyo(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 
@@ -88,7 +88,7 @@ function gsapFadeInForEnd(selector) {
         scrollTrigger: {
           trigger: el,
           start: "top 100%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none none"
         }
       }
     );
@@ -104,7 +104,7 @@ function gsapFadeInThenYoyo(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 
@@ -145,7 +145,7 @@ function gsapFadeInThenPulse(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse", // không reverse
+        toggleActions: "play none none none", // không none
       }
     });
 
@@ -200,7 +200,7 @@ function gsapFadeRight(element, options = {}) {
       scrollTrigger: {
         trigger: element,
         start: scrollStart,
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     }
   );
@@ -219,7 +219,7 @@ function gsapFadeLeft(selector) {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       }
     );
@@ -240,7 +240,7 @@ function gsapFadeUp(selector) {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       }
     );
@@ -280,7 +280,7 @@ function gsapFlipVerticalLeft(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });
@@ -298,7 +298,7 @@ function gsapFlipVerticalBottom(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });
@@ -317,7 +317,7 @@ function gsapRotateBottomLeft(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });
@@ -336,7 +336,7 @@ function gsapRotateBottomRight(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });
@@ -348,7 +348,7 @@ function gsapRotateBottomLeftThenYoyo(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 
@@ -379,7 +379,7 @@ function gsapRotateBottomRightThenYoyo(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 
