@@ -660,7 +660,6 @@ header {
   width: 100%;
   aspect-ratio: 500/340;
   perspective: 1000px;
-  background: url("../../assets/images/base_bg.png") no-repeat center/cover;
   padding-bottom: 17%;
   color: #393934;
   background-color: #f1ece8;
@@ -826,7 +825,6 @@ header {
 .rsvp .content {
   width: 100%;
   aspect-ratio: 500/664;
-  background: url("../../assets/images/rsvp_bg.png") no-repeat center/cover;
   perspective: 1000px;
   position: relative;
   font-family: "SVN-GothamBook", sans-serif;
@@ -1087,7 +1085,7 @@ header {
 .letter-section .content {
   width: 100%;
   aspect-ratio: 500/891;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/letter.webp");
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/letter.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

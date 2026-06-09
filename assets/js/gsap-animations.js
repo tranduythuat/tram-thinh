@@ -66,7 +66,7 @@ function gsapFadeIn(element, options = {}) {
       scrollTrigger: {
         trigger: element,
         start: scrollStart,
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
       clearProps: "filter",
     }
