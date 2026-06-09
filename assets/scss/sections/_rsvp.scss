@@ -1,0 +1,301 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rsvp {
+    width: 100%;
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 664;
+        background: url('../../assets/images/rsvp_bg.png') no-repeat center / cover;
+        perspective: 1000px;
+        position: relative;
+        font-family: $font-gotham;
+        background-color: #f1ece8ff;
+        color: $text-color-01;
+        padding-top: 15%;
+
+        .divider {
+            margin: 5%;
+            img {
+                max-width: 10px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .rsvp-form {
+            display: block;
+            padding: 0 12%;
+
+            .header {
+                .title {
+                    font-family: $font-PinyonScript;
+                    font-size: 36px;
+                    font-weight: 300;
+                    margin-bottom: 5%;
+                    color: $text-color-01;
+                }
+
+                .subtitle {
+                    font-size: 11px;
+                    font-family: $font-gotham;
+                    line-height: 1.5;
+                    margin-bottom: 3%;
+
+                    .strong {
+                        font-family: $font-gothamBold;
+                    }
+                }
+            }
+
+            hr {
+                border-top: 2px solid $text-color-01;
+                margin-bottom: 8%;
+            }
+
+            .button-group {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 8%;
+                margin-bottom: 2%;
+
+                .radio-wrapper {
+                    position: relative;
+                    height: 32px;
+                }
+
+                .radio-wrapper input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                .radio-label {
+                    @include flex-center;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    font-family: inherit;
+                    // padding: 4% 0;
+                    height: 100%;
+                    line-height: 1;
+                    border-radius: 8px;
+                    background: $input-color;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    text-align: center;
+                    border: none;
+
+                    &:hover {
+                        background: $active-color;
+                        color: white;
+                    }
+                }
+
+                .radio-wrapper input[type="radio"]:checked+.radio-label {
+                    background: $active-color;
+                    color: white;
+                }
+            }
+
+            .form-group {
+                margin-bottom: 3%;
+
+                input[type="text"],
+                input[type="number"],
+                textarea {
+                    font-family: inherit;
+                    color: $text-color-01;
+                    width: 100%;
+                    padding: 2% 4%;
+                    border-radius: 8px;
+                    background: $input-color;
+                    font-size: 11px;
+                    outline: none;
+                    border: none;
+                    line-height: 1;
+                    transition: border-color 0.3s ease;
+                    // text-transform: uppercase;
+                }
+
+                input[type="text"]:focus,
+                input[type="number"]:focus,
+                textarea:focus {
+                    outline: none;
+                }
+
+                textarea#message {
+                    aspect-ratio: 5 / 1;
+                    resize: vertical;
+                    font-family: inherit;
+                    padding: 2% 4%;
+                    border-radius: 15px;
+                }
+
+
+                input[type="text"]::placeholder,
+                textarea::placeholder {
+                    // color: $text-color;
+                }
+
+                textarea::placeholder {
+                    white-space: pre-line;
+                    /* Cho phép hiển thị xuống dòng trong placeholder */
+                }
+
+                .guest-info-title {
+                    font-size: 14px;
+                    margin-bottom: 2%;
+                }
+
+                .subtitle {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    margin-bottom: 3%;
+                }
+
+                .form-select {
+                    font-family: $font-lora;
+                    width: 100%;
+                    padding: 1.6% 3%;
+                    border-radius: 25px;
+                    background: transparent;
+                    font-size: 12px;
+                    color: $text-color;
+                    outline: none;
+                    border: 2px solid $text-color ;
+                    transition: border-color 0.3s ease;
+                    // appearance: none;
+                    // -webkit-appearance: none;
+                    // -moz-appearance: none;
+                    // background-image: url("../../assets/images/chevron_icon.png");
+                    // background-repeat: no-repeat;
+                    // background-position: right 10px center;
+                    // background-size: 9px;
+                    cursor: pointer;
+                }
+
+                .wish-label {
+                    font-size: 14px;
+                    margin-bottom: 3%;
+                }
+            }
+
+            .form-group.confirm,
+            .form-group.gender {
+                margin-bottom: 3%;
+            }
+
+            .form-group.related {
+                margin-top: 8%;
+            }
+
+            .form-group.guest-gender {
+                margin-bottom: 6%;
+            }
+
+            .submit-btn {
+                font-family: $font-gothamBold;
+                width: 33%;
+                padding: 3%;
+                line-height: 1;
+                background: $active-color;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-weight: 300;
+                font-size: 10px;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: background 0.3s ease;
+                margin: 8% 0 10%;
+            }
+
+            .submit-btn:hover {
+                background: rgb(41, 51, 36);
+                opacity: 0.9;
+            }
+
+            .submit-btn:active {
+                transform: scale(0.98);
+            }
+
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 2%;
+        font-size: 9.11px;
+    }
+
+    .text-size-10 {
+        font-size: 9.11px;
+    }
+
+    .text-size-8 {
+        font-size: 8px;
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .rsvp-form {
+                .header {
+                    .title {
+                        font-size: calc((36 / 500) * 100vw);
+                    }
+
+                    .subtitle {
+                        font-size: calc((11 / 500) * 100vw);
+                    }
+                }
+
+                .divider {
+                    img {
+                        max-width: calc((10 / 500) * 100vw);
+                    }
+                }
+
+                .button-group {
+                    .radio-wrapper {
+                        height: calc((32 / 500) * 100vw);
+                    }
+
+                    .radio-label {
+                        font-size: calc((11 / 500) * 100vw);
+                    }
+                }
+
+                .form-group {
+                    input[type="text"],
+                    input[type="number"],
+                    textarea,
+                    .form-select {
+                        font-size: calc((11 / 500) * 100vw);
+                    }
+
+                    .guest-info-title {
+                        font-size: calc((15 / 500) * 100vw);
+                    }
+
+                    .wish-label {
+                        font-size: calc((14 / 500) * 100vw);
+                    }
+
+                    .subtitle {
+                        font-size: calc((12 / 500) * 100vw);
+                    }
+                }
+
+                .form-group.dietary {
+                    p.subtitle {
+                        font-size: calc((14 / 500) * 100vw);
+                    }
+                }
+
+                .submit-btn {
+                    font-size: calc((12.7 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

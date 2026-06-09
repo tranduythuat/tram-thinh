@@ -1,0 +1,1116 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SVN-GothamBook";
+  src: url("../../assets/fonts/SVN-GothamBook.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamBold";
+  src: url("../../assets/fonts/SVN-GothamBold.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamLight";
+  src: url("../../assets/fonts/SVN-GothamLight.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamLightItalic";
+  src: url("../../assets/fonts/SVN-GothamLightItalic.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamLightItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-Gilroy-Bold";
+  src: url("../../assets/fonts/SVN-Gilroy-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-Gilroy-Xlight";
+  src: url("../../assets/fonts/SVN-Gilroy-Xlight.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PinyonScript";
+  src: url("../../assets/fonts/PinyonScript-Regular.woff2") format("woff2"), url("../../assets/fonts/PinyonScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UVNKeChuyen3";
+  src: url("../../assets/fonts/UVNKeChuyen3.woff2") format("woff2"), url("../../assets/fonts/UVNKeChuyen3.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HLTJaneAusten";
+  src: url("../../assets/fonts/HLTJaneAusten-NoSecret.woff2") format("woff2"), url("../../assets/fonts/HLTJaneAusten-NoSecret.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UVNBUCTHU";
+  src: url("../../assets/fonts/UVNBUCTHU.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "1FTV-VIP-Qerginas";
+  src: url("../../assets/fonts/1FTV-VIP-Qerginas-Frenchstyle-Serif.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bellamy-Stevenson";
+  src: url("../../assets/fonts/Bellamy-Stevenson.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ICIELBCOLDSTYLE";
+  src: url("../../assets/fonts/ICIELBCOLDSTYLE-REGULAR.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  max-width: 500px;
+  height: auto;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
+  background-color: #f1ece8;
+  color: #efede6;
+  display: none;
+  opacity: 0;
+}
+
+/* music */
+.music-box {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  right: 1%;
+  cursor: pointer;
+}
+.music-box .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90px;
+}
+.music-box .label span {
+  position: absolute;
+  right: -23%;
+  width: 105%;
+  font-family: "SVN-GothamBook", sans-serif;
+  font-size: 12px;
+  background-color: rgb(100, 137, 130);
+  color: antiquewhite;
+  padding: 3% 5% 5% 20%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  opacity: 0.9;
+}
+.music-box .player {
+  max-width: 55px;
+  width: 105%;
+  aspect-ratio: 1;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player #iconSvg {
+  width: 100%;
+  height: 100%;
+  fill: var(--text-title-color);
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 2.4vw;
+  }
+  .music-box {
+    bottom: 2vw;
+  }
+  .music-box .label {
+    width: 18vw;
+  }
+  .music-box .label span {
+    font-size: 2.4vw;
+  }
+  .music-box .player {
+    max-width: 11vw;
+  }
+}
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+/* Định nghĩa hoạt ảnh xoay */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #b4b3a8;
+  color: white;
+  padding: 1rem;
+}
+
+.image-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+.image-wrapper img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+[data-animate=flip], [data-animate=flip-yoyo] {
+  transform-origin: left center;
+  transform: rotateY(-120deg) scale(0.9);
+  opacity: 0;
+  filter: brightness(0.6);
+  backface-visibility: hidden;
+  transition: none;
+}
+
+[data-animate=flip].active, [data-animate=flip-yoyo].active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  border-radius: 12px;
+}
+
+.red {
+  background: #e74c3c;
+}
+
+.blue {
+  background: #3498db;
+}
+
+.green {
+  background: #2ecc71;
+}
+
+.shake-text {
+  animation: shakeWithPause 3s ease-in-out infinite;
+}
+
+@keyframes shakeWithPause {
+  /* Rung lắc nhẹ - kéo dài hơn */
+  0%, 100% {
+    transform: translateX(0);
+  }
+  3% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  6% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  9% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  12% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  15% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  18% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  21% {
+    transform: translateX(-2px) rotate(-0.5deg);
+  }
+  24% {
+    transform: translateX(2px) rotate(0.5deg);
+  }
+  27% {
+    transform: translateX(-2px) rotate(-0.5deg);
+  }
+  30% {
+    transform: translateX(2px) rotate(0.5deg);
+  }
+  33% {
+    transform: translateX(-1px) rotate(-0.3deg);
+  }
+  36% {
+    transform: translateX(1px) rotate(0.3deg);
+  }
+  39% {
+    transform: translateX(-1px) rotate(-0.3deg);
+  }
+  42% {
+    transform: translateX(0) rotate(0deg);
+  }
+  /* Nghỉ một đoạn */
+  42%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+.hero {
+  width: 100%;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/hero_bg.webp") no-repeat center/cover;
+}
+.hero .content {
+  aspect-ratio: 500/891;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+  font-weight: 300;
+}
+.hero .content .divider {
+  margin: 2% 0;
+  max-width: 74px;
+  width: 100%;
+  aspect-ratio: 74/21;
+  background: url("../../assets/images/divider-top.png") no-repeat center/contain;
+}
+.hero .content .divider.bot {
+  background: url("../../assets/images/divider1.png") no-repeat center/contain;
+}
+.hero .content .welcome {
+  font-family: "SVN-GothamLight", sans-serif;
+  margin-bottom: 2%;
+}
+.hero .content .couple-name {
+  font-size: 36px;
+  font-family: "PinyonScript", sans-serif;
+}
+.hero .content .photo-frame {
+  margin: 4% 0;
+}
+.hero .content .photo-frame img {
+  max-width: 237px;
+}
+.hero .content .forever {
+  font-size: 22px;
+  font-family: "PinyonScript", sans-serif;
+}
+@media (max-width: 500px) {
+  .hero .content .divider {
+    max-width: 14.8vw;
+  }
+  .hero .content .couple-name {
+    font-size: 7.2vw;
+  }
+  .hero .content .photo-frame img {
+    max-width: 47.4vw;
+  }
+  .hero .content .forever {
+    font-size: 4.4vw;
+  }
+}
+
+.our-story {
+  width: 100%;
+}
+.our-story .content {
+  aspect-ratio: 500/1625;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/bg_blur.webp") no-repeat bottom/100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-family: "1FTV-VIP-Qerginas", sans-serif;
+  background-color: #efede6;
+}
+.our-story .content .couple-hero {
+  max-width: 406px;
+  width: 100%;
+  aspect-ratio: 406/630;
+  background-color: #efede6;
+  margin-top: 14%;
+  border-radius: 10px;
+}
+.our-story .content .couple-hero .image {
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-808-1.webp") no-repeat center/cover;
+  max-width: 98%;
+  width: 100%;
+  aspect-ratio: 394/517;
+  background-color: #b4b3a8;
+  margin: auto;
+  border-radius: 10px;
+}
+.our-story .content .couple-hero .title {
+  margin-top: 10%;
+  font-family: "PinyonScript", sans-serif;
+  color: #393934;
+  font-size: 36px;
+  transform: rotate(-5deg);
+}
+.our-story .content .story {
+  width: 100%;
+  color: #efede6;
+}
+.our-story .content .story .logo {
+  margin-top: 13%;
+  margin-bottom: 4%;
+}
+.our-story .content .story .logo img {
+  max-width: 36px;
+}
+.our-story .content .story .subtitle {
+  font-family: "SVN-gothamBold", sans-serif;
+  font-size: 11px;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+}
+.our-story .content .story .subtext {
+  font-family: "SVN-GothamBook", sans-serif;
+  font-size: 11px;
+  margin-bottom: 12%;
+}
+.our-story .content .memory {
+  position: relative;
+}
+.our-story .content .memory .photo {
+  position: absolute;
+  width: 100%;
+  border: 6px solid #efede6;
+}
+.our-story .content .memory .memory-content {
+  position: absolute;
+}
+.our-story .content .memory .memory-content .label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "SVN-GothamBook", sans-serif;
+  font-size: 11px;
+  background-color: #efede6;
+  color: #393934;
+  line-height: 1;
+  padding: 1% 3%;
+  margin-bottom: 2%;
+}
+.our-story .content .memory .memory-content p {
+  font-family: "SVN-GothamBook", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+}
+.our-story .content .memory.memory-left {
+  aspect-ratio: 500/325;
+  text-align: left;
+  margin-bottom: 15%;
+}
+.our-story .content .memory.memory-left .photo {
+  max-width: 177px;
+  aspect-ratio: 164/218;
+}
+.our-story .content .memory.memory-left .photo.photo1 {
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-551.webp") no-repeat center/cover;
+  top: 0;
+  left: 28%;
+}
+.our-story .content .memory.memory-left .photo.photo2 {
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-642.webp") no-repeat center/cover;
+  bottom: 0;
+  left: 0;
+}
+.our-story .content .memory.memory-left .memory-content {
+  bottom: 2%;
+  left: 40%;
+}
+.our-story .content .memory.memory-right {
+  aspect-ratio: 500/168;
+  text-align: right;
+}
+.our-story .content .memory.memory-right .photo {
+  max-width: 215px;
+  aspect-ratio: 215/168;
+  right: 0;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-815.webp") no-repeat 100% 38%/100%;
+}
+.our-story .content .memory.memory-right .memory-content {
+  bottom: 28%;
+  left: 10%;
+  padding-right: 48%;
+}
+.our-story .content .memory.memory-right .memory-content p {
+  text-align: justify !important;
+}
+@media (max-width: 500px) {
+  .our-story .content .couple-hero {
+    max-width: 81.2vw;
+    border-radius: 2vw;
+  }
+  .our-story .content .couple-hero .image {
+    border-radius: 2vw;
+  }
+  .our-story .content .couple-hero .title {
+    font-size: 7.2vw;
+  }
+  .our-story .content .story .logo img {
+    max-width: 7.2vw;
+  }
+  .our-story .content .story .subtitle, .our-story .content .story .subtext {
+    font-size: 2.2vw;
+  }
+  .our-story .content .memory .photo {
+    border: 1.2vw solid #efede6;
+  }
+  .our-story .content .memory .memory-content .label {
+    font-size: 2.2vw;
+  }
+  .our-story .content .memory .memory-content p {
+    font-size: 2.2vw;
+    letter-spacing: 0.22vw;
+  }
+  .our-story .content .memory.memory-left .photo {
+    max-width: 35.4vw;
+  }
+  .our-story .content .memory.memory-right .photo {
+    max-width: 43vw;
+  }
+}
+
+.couple-photo02 {
+  width: 100%;
+}
+.couple-photo02 .content {
+  width: 100%;
+  aspect-ratio: 500/221;
+  background-color: #b7b09b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-703-1.webp") no-repeat 44% 77%/140%;
+}
+.couple-photo02 .content .logo {
+  max-width: 36px;
+}
+@media (max-width: 500px) {
+  .couple-photo02 .content .logo {
+    max-width: 7.2vw;
+  }
+}
+
+.timeline {
+  width: 100%;
+}
+.timeline .content {
+  width: 100%;
+  background: url("../../assets/images/line-timelinne.png") no-repeat 50% 75%/112px;
+  aspect-ratio: 500/686;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1ece8;
+  color: #393934;
+  position: relative;
+}
+.timeline .content .title {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: 12%;
+}
+.timeline .content .timeline .event {
+  position: absolute;
+}
+.timeline .content .timeline .event .flower {
+  margin-bottom: 6%;
+}
+.timeline .content .timeline .event .flower img {
+  max-width: 32px;
+}
+.timeline .content .timeline .event h3 {
+  font-family: "SVN-gothamBold", sans-serif;
+  font-size: 15px;
+}
+.timeline .content .timeline .event .location {
+  font-family: "SVN-GothamBook", sans-serif;
+  font-size: 15px;
+}
+.timeline .content .timeline .event .detail {
+  margin-top: 4%;
+  font-family: "SVN-GothamLightItalic", sans-serif;
+  font-size: 11px;
+}
+.timeline .content .timeline .event.engagement {
+  top: 40%;
+  left: 48%;
+}
+.timeline .content .timeline .event.wedding {
+  top: 58%;
+  left: 15%;
+}
+.timeline .content .timeline .event.party {
+  top: 76%;
+  left: 56%;
+}
+@media (max-width: 500px) {
+  .timeline .content {
+    background-size: 22.4vw;
+  }
+  .timeline .content .title {
+    font-size: 7.2vw;
+  }
+  .timeline .content .timeline .event .flower img {
+    max-width: 6.4vw;
+  }
+  .timeline .content .timeline .event h3, .timeline .content .timeline .event .location {
+    font-size: 3vw;
+  }
+  .timeline .content .timeline .event .detail {
+    font-size: 2.2vw;
+  }
+}
+
+.gallery {
+  width: 100%;
+}
+.gallery .content {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 500/207;
+  display: flex;
+  justify-content: space-between;
+}
+.gallery .content .gallery {
+  display: block;
+  width: 100%;
+}
+.gallery .content .gallery.gallery-1 {
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-342.webp") no-repeat 100% 97%/100%;
+  max-width: 308px;
+  background-color: #b4b3a8;
+}
+.gallery .content .gallery.gallery-2 {
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-744.webp") no-repeat center/cover;
+  max-width: 182px;
+  background-color: #b4b3a8;
+}
+@media (max-width: 500px) {
+  .gallery .content .gallery.gallery-1 {
+    max-width: 61.6vw;
+  }
+  .gallery .content .gallery.gallery-2 {
+    max-width: 36.4vw;
+  }
+}
+
+.dresscode {
+  width: 100%;
+}
+.dresscode .content {
+  width: 100%;
+  aspect-ratio: 500/340;
+  perspective: 1000px;
+  background: url("../../assets/images/base_bg.png") no-repeat center/cover;
+  padding-bottom: 17%;
+  color: #393934;
+  background-color: #f1ece8;
+}
+.dresscode .content .logo {
+  margin: 15% 0 2%;
+}
+.dresscode .content .logo img {
+  max-width: 35px;
+}
+.dresscode .content h2 {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: 5%;
+}
+.dresscode .content .subtext {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "SVN-GothamBook", sans-serif;
+  line-height: 1.8;
+}
+.dresscode .content .colors-grid {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 5%;
+}
+.dresscode .content .colors-grid .item {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.dresscode .content .colors-grid .item .color {
+  width: 100%;
+}
+.dresscode .content .colors-grid .item .color img {
+  max-width: 34px;
+}
+.dresscode .content .colors-grid .item .label {
+  font-size: 10px;
+  margin-top: 10%;
+  font-family: "SVN-GothamBook", sans-serif;
+  text-transform: uppercase;
+}
+.dresscode .content .divider2 {
+  margin-top: 12%;
+}
+.dresscode .content .divider2 img {
+  max-width: 174px;
+}
+@media (max-width: 500px) {
+  .dresscode .content .logo img {
+    max-width: 7vw;
+  }
+  .dresscode .content h2 {
+    font-size: 7.2vw;
+  }
+  .dresscode .content .subtext {
+    font-size: 2vw;
+  }
+  .dresscode .content .colors-grid .item .color img {
+    max-width: 6.8vw;
+  }
+  .dresscode .content .colors-grid .item .label {
+    font-size: 2vw;
+  }
+  .dresscode .content .divider2 img {
+    max-width: 34.8vw;
+  }
+}
+
+.upload {
+  width: 100%;
+}
+.upload .content {
+  padding: 10% 0;
+  width: 100%;
+  aspect-ratio: 500/625;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/upload_bg.webp") no-repeat center/cover;
+  perspective: 1000px;
+  color: #f1ece8;
+  position: relative;
+  padding-top: 70%;
+}
+.upload .content .hero-img {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.upload .content .hero-img img {
+  max-width: 254px;
+}
+.upload .content .title {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 5%;
+}
+.upload .content .divider {
+  margin-bottom: 5%;
+}
+.upload .content .divider img {
+  max-width: 10px;
+}
+.upload .content .subtext {
+  font-size: 11px;
+  font-family: "SVN-GothamBook", sans-serif;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+.upload .content .subtext .bold {
+  font-family: "SVN-gothamBold", sans-serif;
+}
+.upload .content .upload-btn {
+  font-family: "SVN-gothamBold", sans-serif;
+  display: block;
+  width: 27%;
+  padding: 2% 0 1.6%;
+  background-color: #efede6;
+  color: #393934;
+  border: none;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+.upload .content .small-note {
+  font-family: "ICIELBCOLDSTYLE", sans-serif;
+  font-size: 12px;
+}
+@media (max-width: 500px) {
+  .upload .content .hero-img img {
+    max-width: 50.8vw;
+  }
+  .upload .content .title {
+    font-size: 8vw;
+  }
+  .upload .content .divider img {
+    max-width: 2vw;
+  }
+  .upload .content .subtext {
+    font-size: 2.2vw;
+  }
+  .upload .content .upload-btn {
+    font-size: 2vw;
+  }
+}
+
+.rsvp {
+  width: 100%;
+}
+.rsvp .content {
+  width: 100%;
+  aspect-ratio: 500/664;
+  background: url("../../assets/images/rsvp_bg.png") no-repeat center/cover;
+  perspective: 1000px;
+  position: relative;
+  font-family: "SVN-GothamBook", sans-serif;
+  background-color: #f1ece8;
+  color: #393934;
+  padding-top: 15%;
+}
+.rsvp .content .divider {
+  margin: 5%;
+}
+.rsvp .content .divider img {
+  max-width: 10px;
+  width: 100%;
+  height: auto;
+}
+.rsvp .content .rsvp-form {
+  display: block;
+  padding: 0 12%;
+}
+.rsvp .content .rsvp-form .header .title {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 5%;
+  color: #393934;
+}
+.rsvp .content .rsvp-form .header .subtitle {
+  font-size: 11px;
+  font-family: "SVN-GothamBook", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 3%;
+}
+.rsvp .content .rsvp-form .header .subtitle .strong {
+  font-family: "SVN-gothamBold", sans-serif;
+}
+.rsvp .content .rsvp-form hr {
+  border-top: 2px solid #393934;
+  margin-bottom: 8%;
+}
+.rsvp .content .rsvp-form .button-group {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8%;
+  margin-bottom: 2%;
+}
+.rsvp .content .rsvp-form .button-group .radio-wrapper {
+  position: relative;
+  height: 32px;
+}
+.rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.rsvp .content .rsvp-form .button-group .radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: inherit;
+  height: 100%;
+  line-height: 1;
+  border-radius: 8px;
+  background: #d0c9b7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: none;
+}
+.rsvp .content .rsvp-form .button-group .radio-label:hover {
+  background: #393934;
+  color: white;
+}
+.rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio]:checked + .radio-label {
+  background: #393934;
+  color: white;
+}
+.rsvp .content .rsvp-form .form-group {
+  margin-bottom: 3%;
+}
+.rsvp .content .rsvp-form .form-group input[type=text],
+.rsvp .content .rsvp-form .form-group input[type=number],
+.rsvp .content .rsvp-form .form-group textarea {
+  font-family: inherit;
+  color: #393934;
+  width: 100%;
+  padding: 2% 4%;
+  border-radius: 8px;
+  background: #d0c9b7;
+  font-size: 11px;
+  outline: none;
+  border: none;
+  line-height: 1;
+  transition: border-color 0.3s ease;
+}
+.rsvp .content .rsvp-form .form-group input[type=text]:focus,
+.rsvp .content .rsvp-form .form-group input[type=number]:focus,
+.rsvp .content .rsvp-form .form-group textarea:focus {
+  outline: none;
+}
+.rsvp .content .rsvp-form .form-group textarea#message {
+  aspect-ratio: 5/1;
+  resize: vertical;
+  font-family: inherit;
+  padding: 2% 4%;
+  border-radius: 15px;
+}
+.rsvp .content .rsvp-form .form-group textarea::placeholder {
+  white-space: pre-line;
+  /* Cho phép hiển thị xuống dòng trong placeholder */
+}
+.rsvp .content .rsvp-form .form-group .guest-info-title {
+  font-size: 14px;
+  margin-bottom: 2%;
+}
+.rsvp .content .rsvp-form .form-group .subtitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+}
+.rsvp .content .rsvp-form .form-group .form-select {
+  font-family: "Lora", sans-serif;
+  width: 100%;
+  padding: 1.6% 3%;
+  border-radius: 25px;
+  background: transparent;
+  font-size: 12px;
+  color: #efede6;
+  outline: none;
+  border: 2px solid #efede6;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+.rsvp .content .rsvp-form .form-group .wish-label {
+  font-size: 14px;
+  margin-bottom: 3%;
+}
+.rsvp .content .rsvp-form .form-group.confirm,
+.rsvp .content .rsvp-form .form-group.gender {
+  margin-bottom: 3%;
+}
+.rsvp .content .rsvp-form .form-group.related {
+  margin-top: 8%;
+}
+.rsvp .content .rsvp-form .form-group.guest-gender {
+  margin-bottom: 6%;
+}
+.rsvp .content .rsvp-form .submit-btn {
+  font-family: "SVN-gothamBold", sans-serif;
+  width: 33%;
+  padding: 3%;
+  line-height: 1;
+  background: #393934;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 300;
+  font-size: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  margin: 8% 0 10%;
+}
+.rsvp .content .rsvp-form .submit-btn:hover {
+  background: rgb(41, 51, 36);
+  opacity: 0.9;
+}
+.rsvp .content .rsvp-form .submit-btn:active {
+  transform: scale(0.98);
+}
+.rsvp label {
+  display: block;
+  margin-bottom: 2%;
+  font-size: 9.11px;
+}
+.rsvp .text-size-10 {
+  font-size: 9.11px;
+}
+.rsvp .text-size-8 {
+  font-size: 8px;
+}
+@media (max-width: 500px) {
+  .rsvp .content .rsvp-form .header .title {
+    font-size: 7.2vw;
+  }
+  .rsvp .content .rsvp-form .header .subtitle {
+    font-size: 2.2vw;
+  }
+  .rsvp .content .rsvp-form .divider img {
+    max-width: 2vw;
+  }
+  .rsvp .content .rsvp-form .button-group .radio-wrapper {
+    height: 6.4vw;
+  }
+  .rsvp .content .rsvp-form .button-group .radio-label {
+    font-size: 2.2vw;
+  }
+  .rsvp .content .rsvp-form .form-group input[type=text],
+  .rsvp .content .rsvp-form .form-group input[type=number],
+  .rsvp .content .rsvp-form .form-group textarea,
+  .rsvp .content .rsvp-form .form-group .form-select {
+    font-size: 2.2vw;
+  }
+  .rsvp .content .rsvp-form .form-group .guest-info-title {
+    font-size: 3vw;
+  }
+  .rsvp .content .rsvp-form .form-group .wish-label {
+    font-size: 2.8vw;
+  }
+  .rsvp .content .rsvp-form .form-group .subtitle {
+    font-size: 2.4vw;
+  }
+  .rsvp .content .rsvp-form .form-group.dietary p.subtitle {
+    font-size: 2.8vw;
+  }
+  .rsvp .content .rsvp-form .submit-btn {
+    font-size: 2.54vw;
+  }
+}
+
+.end {
+  width: 100%;
+}
+.end .content {
+  width: 100%;
+  aspect-ratio: 500/751;
+  background: linear-gradient(to bottom, #f1ece8, rgba(0, 0, 0, 0)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/end_bg.webp") no-repeat center/cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  font-family: "SVN-GothamBook", sans-serif;
+  color: #393934;
+}
+.end .content .text-main {
+  font-size: 10px;
+  line-height: 1.3;
+  margin-top: 8%;
+  text-align-last: center;
+  text-align: justify;
+  padding: 0% 15%;
+  line-height: 1.5;
+}
+.end .content .end-text {
+  font-size: 10px;
+  margin-top: 3%;
+}
+@media (max-width: 500px) {
+  .end .content .text-main, .end .content .end-text {
+    font-size: 2vw;
+  }
+}
+
+.letter-section {
+  width: 100%;
+  max-width: 500px;
+}
+.letter-section .content {
+  width: 100%;
+  aspect-ratio: 500/891;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/letter.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  color: #564e47;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.439);
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+  padding-bottom: 15%;
+}
+.letter-section .content .subtext {
+  font-family: "HLTJaneAusten", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .letter-section .content .subtext {
+    font-size: 3.8vw;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

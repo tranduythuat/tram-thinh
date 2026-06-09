@@ -1,0 +1,97 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.upload {
+    width: 100%;
+    .content {
+        padding: 10% 0;
+        width: 100%;
+        aspect-ratio: 500 / 625;
+        background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/upload_bg.webp') no-repeat center / cover;
+        perspective: 1000px;
+        color: $secondary-color;
+        position: relative;
+        padding-top: 70%;
+
+        .hero-img {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+                max-width: 254px;
+            }
+        }
+        
+        .title {
+            font-family: $font-PinyonScript;
+            font-size: 40px;
+            font-weight: 300;
+            margin-bottom: 5%;
+        }
+
+        .divider {
+            margin-bottom: 5%;
+            img {
+                max-width: 10px;
+            }
+        }
+        .subtext {
+            font-size: 11px;
+            font-family: $font-gotham;
+            margin-bottom: 5%;
+            text-transform: uppercase;
+            line-height: 1.8;
+            .bold {
+                font-family: $font-gothamBold;
+            }
+        }
+        .upload-btn {
+            font-family: $font-gothamBold;
+            display: block;
+            width: 27%;
+            padding: 2% 0 1.6%;
+            background-color: $text-color;
+            color: $text-color-01;
+            border: none;
+            font-size: 10px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0 auto;
+            margin-bottom: 10%;
+        }
+        .small-note {
+            font-family: $font-ICIELBCOLDSTYLE;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .hero-img {
+                img {
+                    max-width: calc((254 / 500) * 100vw);
+                }
+            }
+
+            .title {
+                font-size: calc((40 / 500) * 100vw);
+            }
+            .divider {
+                img {
+                    max-width: calc((10 / 500) * 100vw);
+                }
+            }
+            .subtext {
+                font-size: calc((11 / 500) * 100vw);
+            }
+            .upload-btn {
+                font-size: calc((10 / 500) * 100vw);
+            }
+        }
+    }
+}

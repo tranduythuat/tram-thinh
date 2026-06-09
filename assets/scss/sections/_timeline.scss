@@ -1,0 +1,125 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.timeline {
+    width: 100%;
+    .content {
+        width: 100%;
+        background: url('../../assets/images/line-timelinne.png') no-repeat 50% 75% / 112px;
+        aspect-ratio: 500 / 686;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f1ece8ff;
+        color: $text-color-01;
+        position: relative;
+        .title {
+            font-family: $font-PinyonScript;
+            font-size: 36px;
+            font-weight: 300;
+            margin-top: 12%;
+        }
+
+        .timeline {
+            .event {
+                position: absolute;
+                .flower {
+                    margin-bottom: 6%;
+                    img {
+                        max-width: 32px;
+                    }
+                }
+                h3 {
+                    font-family: $font-gothamBold;
+                    font-size: 15px;
+                }
+                .location {
+                    font-family: $font-gotham;
+                    font-size: 15px;
+                }
+                .detail {
+                    margin-top: 4%;
+                    font-family: $font-GothamLightItalic;
+                    font-size: 11px;
+                }
+
+                &.engagement {
+                    top: 40%;
+                    left: 48%;
+                }
+
+                &.wedding {
+                    top: 58%;
+                    left: 15%;
+                }
+                &.party {
+                    top: 76%;
+                    left: 56%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            background-size: calc((112 / 500) * 100vw);
+            .title {
+                font-size: calc((36 / 500) * 100vw);
+            }
+    
+            .timeline {
+                .event {
+                    .flower {
+                        img {
+                            max-width: calc((32 / 500) * 100vw);
+                        }
+                    }
+                    h3, .location {
+                        font-size: calc((15 / 500) * 100vw);
+                    }
+                    .detail {
+                        font-size: calc((11 / 500) * 100vw);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    width: 100%;
+    .content {      
+        max-width: 100%;
+        width: 100%;
+        aspect-ratio: 500 / 207;
+        display: flex;
+        justify-content: space-between;
+
+        .gallery {
+            display: block;
+            width: 100%;
+            &.gallery-1 {
+                background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-342.webp') no-repeat 100% 97% / 100%;
+                max-width: 308px;
+                background-color: #b4b3a8ff;
+            }
+            &.gallery-2 {
+                background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-744.webp') no-repeat center / cover;
+                max-width: 182px;
+                background-color: #b4b3a8ff;
+            }
+        }   
+
+        @media (max-width: 500px) {
+            .gallery {
+                &.gallery-1 {
+                    max-width: calc((308 / 500) * 100vw);
+                }
+                &.gallery-2 {
+                    max-width: calc((182 / 500) * 100vw);
+                }
+            }   
+        }
+    }
+}
