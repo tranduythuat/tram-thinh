@@ -43,28 +43,27 @@
       const audio = qs("#audio");
       const icon = qs("#iconSvg");
       const btn = qs("#player-btn");
-      const label = qs("#musicLabel");
+      // const label = qs("#musicLabel");
   
       let isOpen = true
   
-      if (!audio || !icon || !btn || !label) return;
+      if (!audio || !icon || !btn) return;
+      // if (!audio || !icon || !btn || !label) return;
   
       // 👉 GSAP timeline cho label
       const tl = gsap.timeline({ paused: true });
   
-      tl.to(label, {
-        x: 200,
-        // opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-         pointerEvents: "none"
-      });
+      // tl.to(label, {
+      //   x: 200,
+      //   // opacity: 0,
+      //   duration: 1,
+      //   ease: "power2.inOut",
+      //    pointerEvents: "none"
+      // });
 
       btn.addEventListener("click", () => {
         if (!audio.src) return;
         audio.paused ? audio.play() : audio.pause();
-  
-        console.log('--- adio ---', audio);
         // toggle label
         if (isOpen) {
           tl.play();
@@ -104,11 +103,11 @@
     const audio = document.querySelector("#audio");
     const openCard = document.getElementById("open-card");
     const params = new URLSearchParams(window.location.search);
-    const isCardOpened = params.get("opened") === "1";
+    const isCardOpened = params.get("opened") === true;
 
     function markCardOpened() {
       const url = new URL(window.location.href);
-      url.searchParams.set("opened", "1");
+      url.searchParams.set("opened", true);
       window.history.replaceState({}, "", url);
     }
 
