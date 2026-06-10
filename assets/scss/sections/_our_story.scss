@@ -61,6 +61,7 @@
                 font-size: 13px;
                 margin-bottom: 4%;
                 text-transform: uppercase;
+                line-height: 1.6;
             }
 
             .subtext {
@@ -103,7 +104,7 @@
             }
 
             &.memory-left {
-                aspect-ratio: 500 / 325;
+                aspect-ratio: 500 / 336;
                 text-align: left;
                 margin-bottom: 15%;
 
@@ -127,6 +128,8 @@
                 .memory-content {
                     bottom: 0%;
                     left: 39%;
+                    padding-right: 8%;
+                    text-align: justify;
                 }
             }
 
@@ -142,9 +145,9 @@
                 }
 
                 .memory-content {
-                    bottom: 28%;
-                    left: 10%;
-                    padding-right: 48%;
+                    bottom: 13%;
+                    left: 8%;
+                    padding-right: 47%;
 
                     p {
                         text-align: justify !important;

@@ -61,9 +61,9 @@ section {
             right: -23%;
             width: 105%;
             font-family: $font-gotham;
-            font-size: 14px;
-            background-color: rgb(100, 137, 130);
-            color: antiquewhite;
+            font-size: 12px;
+            background-color: $input-color;
+            color: $text-color-01;
             padding: 3% 5% 5% 20%;
             border-top-left-radius: 25px;
             border-bottom-left-radius: 25px;
@@ -110,7 +110,7 @@ section {
         .label {
             width: calc((90 / 500) * 100vw);
             span {
-                font-size: calc((14 / 500) * 100vw);
+                font-size: calc((12 / 500) * 100vw);
             }
         }
         .player {

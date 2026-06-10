@@ -139,9 +139,9 @@ section {
   right: -23%;
   width: 105%;
   font-family: "SVN-GothamBook", sans-serif;
-  font-size: 14px;
-  background-color: rgb(100, 137, 130);
-  color: antiquewhite;
+  font-size: 12px;
+  background-color: #d0c9b7;
+  color: #393934;
   padding: 3% 5% 5% 20%;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -174,7 +174,7 @@ section {
     width: 18vw;
   }
   .music-box .label span {
-    font-size: 2.8vw;
+    font-size: 2.4vw;
   }
   .music-box .player {
     max-width: 11vw;
@@ -415,6 +415,7 @@ header {
   font-size: 13px;
   margin-bottom: 4%;
   text-transform: uppercase;
+  line-height: 1.6;
 }
 .our-story .content .story .subtext {
   font-family: "SVN-GothamBook", sans-serif;
@@ -448,7 +449,7 @@ header {
   font-size: 13px;
 }
 .our-story .content .memory.memory-left {
-  aspect-ratio: 500/325;
+  aspect-ratio: 500/336;
   text-align: left;
   margin-bottom: 15%;
 }
@@ -469,6 +470,8 @@ header {
 .our-story .content .memory.memory-left .memory-content {
   bottom: 0%;
   left: 39%;
+  padding-right: 8%;
+  text-align: justify;
 }
 .our-story .content .memory.memory-right {
   aspect-ratio: 500/168;
@@ -481,9 +484,9 @@ header {
   background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-815.jpg") no-repeat 100% 38%/100%;
 }
 .our-story .content .memory.memory-right .memory-content {
-  bottom: 28%;
-  left: 10%;
-  padding-right: 48%;
+  bottom: 13%;
+  left: 8%;
+  padding-right: 47%;
 }
 .our-story .content .memory.memory-right .memory-content p {
   text-align: justify !important;
