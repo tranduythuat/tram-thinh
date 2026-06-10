@@ -39,21 +39,44 @@
        MUSIC
     ====================================================== */
 
-  function initMusic() {
-    const audio = qs("#audio");
-    const icon = qs("#iconSvg");
-    const btn = qs("#player-btn");
+    function initMusic() {
+      const audio = qs("#audio");
+      const icon = qs("#iconSvg");
+      const btn = qs("#player-btn");
+      const label = qs("#musicLabel");
+  
+      let isOpen = true
+  
+      if (!audio || !icon || !btn || !label) return;
+  
+      // 👉 GSAP timeline cho label
+      const tl = gsap.timeline({ paused: true });
+  
+      tl.to(label, {
+        x: 200,
+        // opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+         pointerEvents: "none"
+      });
 
-    if (!audio || !icon || !btn) return;
-
-    btn.addEventListener("click", () => {
-      if (!audio.src) return;
-      audio.paused ? audio.play() : audio.pause();
-    });
-
-    audio.addEventListener("play", () => icon.classList.add("spin"));
-    audio.addEventListener("pause", () => icon.classList.remove("spin"));
-  }
+      btn.addEventListener("click", () => {
+        if (!audio.src) return;
+        audio.paused ? audio.play() : audio.pause();
+  
+        console.log('--- adio ---', audio);
+        // toggle label
+        if (isOpen) {
+          tl.play();
+        } else {
+          tl.reverse();
+        }
+        isOpen = !isOpen;
+      });
+  
+      audio.addEventListener("play", () => icon.classList.add("spin"));
+      audio.addEventListener("pause", () => icon.classList.remove("spin"));
+    }
 
   /* ======================================================
        DRESSCODE ANIMATION
@@ -79,6 +102,22 @@
   function initPage() {
     const tl = gsap.timeline({ paused: true });
     const audio = document.querySelector("#audio");
+    const openCard = document.getElementById("open-card");
+    const params = new URLSearchParams(window.location.search);
+    const isCardOpened = params.get("opened") === "1";
+
+    function markCardOpened() {
+      const url = new URL(window.location.href);
+      url.searchParams.set("opened", "1");
+      window.history.replaceState({}, "", url);
+    }
+
+    if (isCardOpened) {
+      gsap.set(".letter-section", { display: "none", opacity: 0 });
+      gsap.set(".container", { display: "block", opacity: 1 });
+      ScrollTrigger.refresh();
+      return;
+    }
 
     tl.to(".letter-section", {
       opacity: 0,
@@ -99,13 +138,19 @@
 
         // 💥 Re-init animation cho container
         initAnimations();
+        // initMusic();
+
         // initDresscodeAnimation();
         // initTimeline();
         ScrollTrigger.refresh();
       }
     });
 
-    document.getElementById("open-card").addEventListener("click", (e) => {
+    if (!openCard) return;
+
+    openCard.addEventListener("click", () => {
+      markCardOpened();
+
       if (audio && audio.paused) {
         audio.play().catch(err => {
           console.log("Autoplay blocked:", err);
@@ -643,7 +688,7 @@
 
   function init() {
     gsap.registerPlugin(ScrollTrigger);
-    // initPage();
+    initPage();
     initLetterAnimation();
     initAnimations();
     // initSwiper();
