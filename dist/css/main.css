@@ -947,15 +947,15 @@ header {
   margin-bottom: 3%;
 }
 .rsvp .content .rsvp-form .form-group .form-select {
-  font-family: "Lora", sans-serif;
+  font-family: inherit;
   width: 100%;
-  padding: 1.6% 3%;
-  border-radius: 25px;
-  background: transparent;
-  font-size: 14px;
-  color: #efede6;
+  padding: 2% 3%;
+  border-radius: 8px;
+  background: #d0c9b7;
+  font-size: 13px;
+  color: #393934;
   outline: none;
-  border: 2px solid #efede6;
+  border: none;
   transition: border-color 0.3s ease;
   cursor: pointer;
 }

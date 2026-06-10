@@ -489,8 +489,6 @@
       confirm,
       guest_number,
       related,
-      phone,
-      wish,
     } = data;
 
     // =========================
@@ -532,7 +530,7 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "sheet=nha-gai";
+    const sheetURL = "https://script.google.com/macros/s/AKfycbxBYsxxG8E1gPZP15Gz9kBdp4B-ER2EFt0gcXmJ1k7W8g9s3ai7nXiQOwCOYl1ZtQYB/exec?sheet=confirm";
 
     try {
       const res = await fetch(sheetURL, {
@@ -543,8 +541,6 @@
           confirm,
           guest_number,
           related,
-          phone,
-          wish,
         }),
       });
 

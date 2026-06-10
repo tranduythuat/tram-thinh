@@ -154,15 +154,15 @@
                 }
 
                 .form-select {
-                    font-family: $font-lora;
+                    font-family: inherit;
                     width: 100%;
-                    padding: 1.6% 3%;
-                    border-radius: 25px;
-                    background: transparent;
-                    font-size: 14px;
-                    color: $text-color;
+                    padding: 2% 3%;
+                    border-radius: 8px;
+                    background: $input-color;
+                    font-size: 13px;
+                    color: $text-color-01;
                     outline: none;
-                    border: 2px solid $text-color ;
+                    border: none;
                     transition: border-color 0.3s ease;
                     // appearance: none;
                     // -webkit-appearance: none;
