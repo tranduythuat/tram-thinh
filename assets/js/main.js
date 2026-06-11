@@ -103,11 +103,11 @@
     const audio = document.querySelector("#audio");
     const openCard = document.getElementById("open-card");
     const params = new URLSearchParams(window.location.search);
-    const isCardOpened = params.get("opened") === true;
+    const isCardOpened = params.get("opened") === "1";
 
     function markCardOpened() {
       const url = new URL(window.location.href);
-      url.searchParams.set("opened", true);
+      url.searchParams.set("opened", 1);
       window.history.replaceState({}, "", url);
     }
 
