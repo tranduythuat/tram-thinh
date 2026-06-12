@@ -117,8 +117,6 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
   background-color: #f1ece8;
   color: #efede6;
-  display: none;
-  opacity: 0;
 }
 
 /* music */
@@ -563,7 +561,6 @@ header {
 }
 .timeline .content {
   width: 100%;
-  background: url("../../assets/images/line-timelinne.png") no-repeat 50% 75%/112px;
   aspect-ratio: 500/686;
   display: flex;
   justify-content: start;
@@ -572,6 +569,7 @@ header {
   background-color: #f1ece8;
   color: #393934;
   position: relative;
+  font-family: "SVN-GothamBook", sans-serif;
 }
 .timeline .content .title {
   font-family: "PinyonScript", sans-serif;
@@ -579,39 +577,154 @@ header {
   font-weight: 300;
   margin-top: 12%;
 }
-.timeline .content .timeline .event {
-  position: absolute;
+.timeline .content .timeline-items {
+  width: 90%;
+  margin: 10% 0 15%;
 }
-.timeline .content .timeline .event .flower {
-  margin-bottom: 6%;
+.timeline .content .timeline-items .schedule-item.horizontal {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
 }
-.timeline .content .timeline .event .flower img {
-  max-width: 32px;
-}
-.timeline .content .timeline .event h3 {
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-date .date-number {
   font-family: "SVN-gothamBold", sans-serif;
-  font-size: 17px;
+  font-size: 24px;
 }
-.timeline .content .timeline .event .location {
-  font-family: "SVN-GothamBook", sans-serif;
-  font-size: 17px;
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-date .date-desc {
+  font-size: 12px;
 }
-.timeline .content .timeline .event .detail {
-  margin-top: 4%;
-  font-family: "SVN-GothamLightItalic", sans-serif;
-  font-size: 13px;
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-divider {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.timeline .content .timeline .event.engagement {
-  top: 40%;
-  left: 50%;
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-divider span {
+  margin-top: 10%;
+  display: inline-block;
+  width: 80%;
+  border-top: 1px dashed black;
 }
-.timeline .content .timeline .event.wedding {
-  top: 56%;
-  left: 12%;
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-content {
+  display: flex;
+  gap: 2%;
+  width: 45%;
 }
-.timeline .content .timeline .event.party {
-  top: 75%;
-  left: 56%;
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-icon img {
+  max-width: 50px;
+}
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-info h3 {
+  font-family: "SVN-gothamBold", sans-serif;
+  font-size: 23px;
+}
+.timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-info p {
+  font-style: italic;
+}
+.timeline .content .timeline-items .schedule-item.timeline {
+  display: flex;
+}
+.timeline .content .timeline-items .schedule-item.timeline .big-date {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timeline .content .timeline-items .schedule-item.timeline .big-date .day {
+  font-family: "SVN-gothamBold", sans-serif;
+  font-size: 74px;
+}
+.timeline .content .timeline-items .schedule-item.timeline .big-date .month {
+  font-size: 22px;
+  line-height: 1;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline {
+  width: 70%;
+  position: relative;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .line {
+  display: inline-block;
+  position: absolute;
+  top: 49%;
+  left: 16%;
+  width: 27%;
+  border-bottom: 1px dashed black;
+  transform: rotate(90deg);
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: black;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  transform: translate(50%, -50%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: black;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .line.line2 {
+  top: 48%;
+  width: 30%;
+  left: 15%;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row {
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-time {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-time .time {
+  font-family: "SVN-gothamBold", sans-serif;
+  font-size: 18px;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-time .label {
+  font-size: 12px;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content {
+  width: 70%;
+  text-align: left;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content h3 {
+  font-family: "SVN-gothamBold", sans-serif;
+  font-size: 20px;
+}
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content p {
+  font-size: 12px;
+  font-style: italic;
 }
 @media (max-width: 500px) {
   .timeline .content {
@@ -620,14 +733,38 @@ header {
   .timeline .content .title {
     font-size: 7.6vw;
   }
-  .timeline .content .timeline .event .flower img {
-    max-width: 6.4vw;
+  .timeline .content .timeline-items .schedule-item.horizontal .schedule-date .date-number {
+    font-size: 4.8vw;
   }
-  .timeline .content .timeline .event h3, .timeline .content .timeline .event .location {
-    font-size: 3.4vw;
+  .timeline .content .timeline-items .schedule-item.horizontal .schedule-date .date-desc {
+    font-size: 2.4vw;
   }
-  .timeline .content .timeline .event .detail {
-    font-size: 2.6vw;
+  .timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-icon img {
+    max-width: 10vw;
+  }
+  .timeline .content .timeline-items .schedule-item.horizontal .schedule-content .event-info h3 {
+    font-size: 4.6vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .big-date .day {
+    font-size: 14.8vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .big-date .month {
+    font-size: 4.4vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .timeline .line::after, .timeline .content .timeline-items .schedule-item.timeline .timeline .line::before {
+    width: 2vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-time .time {
+    font-size: 3.6vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-time .label {
+    font-size: 2.4vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content h3 {
+    font-size: 4vw;
+  }
+  .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content p {
+    font-size: 2.4vw;
   }
 }
 

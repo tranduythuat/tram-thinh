@@ -3,9 +3,10 @@
 
 .timeline {
     width: 100%;
+
     .content {
         width: 100%;
-        background: url('../../assets/images/line-timelinne.png') no-repeat 50% 75% / 112px;
+        // background: url('../../assets/images/line-timelinne.png') no-repeat 50% 75% / 112px;
         aspect-ratio: 500 / 686;
         display: flex;
         justify-content: start;
@@ -14,6 +15,8 @@
         background-color: #f1ece8ff;
         color: $text-color-01;
         position: relative;
+        font-family: $font-gotham;
+
         .title {
             font-family: $font-PinyonScript;
             font-size: 38px;
@@ -21,41 +24,156 @@
             margin-top: 12%;
         }
 
-        .timeline {
-            .event {
-                position: absolute;
-                .flower {
-                    margin-bottom: 6%;
-                    img {
-                        max-width: 32px;
+        .timeline-items {
+            width: 90%;
+            margin: 10% 0 15%;
+
+            .schedule-item.horizontal {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 5%;
+                .schedule-date {
+                    .date-number {
+                        font-family: $font-gothamBold;
+                        font-size: 24px;
+                    }
+                    .date-desc {
+                        font-size: 12px;
                     }
                 }
-                h3 {
-                    font-family: $font-gothamBold;
-                    font-size: 17px;
-                }
-                .location {
-                    font-family: $font-gotham;
-                    font-size: 17px;
-                }
-                .detail {
-                    margin-top: 4%;
-                    font-family: $font-GothamLightItalic;
-                    font-size: 13px;
+
+                .schedule-divider {
+                    width: 20%;
+                    @include flex-center;
+                    span {
+                        margin-top: 10%;
+                        display: inline-block;
+                        width: 80%;
+                        border-top: 1px dashed black
+                    }
                 }
 
-                &.engagement {
-                    top: 40%;
-                    left: 50%;
-                }
+                .schedule-content {
+                    display: flex;
+                    gap: 2%;
+                    width: 45%;
 
-                &.wedding {
-                    top: 56%;
-                    left: 12%;
+                    .event-icon {
+                        @include flex-center;
+                        img {
+                            max-width: 50px;
+                        }
+                    }
+                    .event-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: left;
+                        h3 {
+                            font-family: $font-gothamBold;
+                            font-size: 23px;
+                        }
+                        p {
+                            font-style: italic;
+                        }
+                    }
+
                 }
-                &.party {
-                    top: 75%;
-                    left: 56%;
+            }
+
+            .schedule-item.timeline {
+                display: flex;
+                .big-date {
+                    width: 30%;
+                    @include flex-center;
+                    flex-direction: column;
+                    .day {
+                        font-family: $font-gothamBold;
+                        font-size: 74px;
+                    }
+                    .month {
+                        font-size: 22px;
+                        line-height:1;
+                    }
+                }
+                .timeline {
+                    width: 70%;
+                    position: relative;
+                    .line {
+                        display: inline-block;
+                        position: absolute;
+                        top: 49%;
+                        left: 16%;
+                        width: 27%;
+                        border-bottom:1px dashed black;
+                        transform: rotate(90deg);
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 10px;
+                            transform: translate(-50%, -50%);
+                            aspect-ratio: 1;
+                            border-radius: 50%;
+                            background-color: black;
+                        }
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 10px;
+                            transform: translate(50%, -50%);
+                            aspect-ratio: 1;
+                            border-radius: 50%;
+                            background-color: black;
+                        }
+                        &.line2 {
+                            top: 48%;
+                            width: 30%;
+                            left: 15%;
+                        }
+                    }
+                    .timeline-row {
+                        display: flex;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .timeline-time {
+                            width: 25%;
+                            @include flex-center;
+                            flex-direction: column;
+                            .time {
+                                font-family: $font-gothamBold;
+                                font-size: 18px;
+                            }
+                            .label {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .timeline-content {
+                            width: 70%;
+                            text-align: left;
+                            padding-left: 10%;
+                            padding-bottom: 5%;
+                            padding-top: 5%;
+
+                            h3 {
+                                font-family: $font-gothamBold;
+                                font-size: 20px;
+                            }
+                            p {
+                                font-size: 12px;
+                                font-style: italic;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -64,22 +182,71 @@
     @media (max-width: 500px) {
         .content {
             background-size: calc((112 / 500) * 100vw);
+
             .title {
                 font-size: calc((38 / 500) * 100vw);
             }
-    
-            .timeline {
-                .event {
-                    .flower {
-                        img {
-                            max-width: calc((32 / 500) * 100vw);
+
+            .timeline-items {
+                .schedule-item.horizontal {
+                    .schedule-date {
+                        .date-number {
+                            font-size: calc((24 / 500) * 100vw);
+                        }
+                        .date-desc {
+                            font-size: calc((12 / 500) * 100vw);
                         }
                     }
-                    h3, .location {
-                        font-size: calc((17 / 500) * 100vw);
+    
+                    .schedule-content {
+                        .event-icon {
+                            img {
+                                max-width: calc((50 / 500) * 100vw);
+                            }
+                        }
+                        .event-info {
+                            h3 {
+                                font-size: calc((23 / 500) * 100vw);
+                            }
+                        }
+    
                     }
-                    .detail {
-                        font-size: calc((13 / 500) * 100vw);
+                }
+    
+                .schedule-item.timeline {
+                    .big-date {
+                        .day {
+                            font-size: calc((74 / 500) * 100vw);
+                        }
+                        .month {
+                            font-size: calc((22 / 500) * 100vw);
+                        }
+                    }
+                    .timeline {
+                        .line {
+                            &::after, &::before {
+                                width: calc((10 / 500) * 100vw);
+                            }
+                        }
+                        .timeline-row {
+                            .timeline-time {
+                                .time {
+                                    font-size: calc((18 / 500) * 100vw);
+                                }
+                                .label {
+                                    font-size: calc((12 / 500) * 100vw);
+                                }
+                            }
+    
+                            .timeline-content {
+                                h3 {
+                                    font-size: calc((20 / 500) * 100vw);
+                                }
+                                p {
+                                    font-size: calc((12 / 500) * 100vw);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -89,7 +256,8 @@
 
 .gallery {
     width: 100%;
-    .content {      
+
+    .content {
         max-width: 100%;
         width: 100%;
         aspect-ratio: 500 / 207;
@@ -99,27 +267,30 @@
         .gallery {
             display: block;
             width: 100%;
+
             &.gallery-1 {
                 background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-342.jpg') no-repeat 100% 97% / 100%;
                 max-width: 308px;
                 background-color: #b4b3a8ff;
             }
+
             &.gallery-2 {
                 background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tram-thinh/couple/kieutram-744.jpg') no-repeat center / cover;
                 max-width: 182px;
                 background-color: #b4b3a8ff;
             }
-        }   
+        }
 
         @media (max-width: 500px) {
             .gallery {
                 &.gallery-1 {
                     max-width: calc((308 / 500) * 100vw);
                 }
+
                 &.gallery-2 {
                     max-width: calc((182 / 500) * 100vw);
                 }
-            }   
+            }
         }
     }
 }
