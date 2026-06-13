@@ -117,8 +117,6 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
   background-color: #f1ece8;
   color: #efede6;
-  display: none;
-  opacity: 0;
 }
 
 /* music */
@@ -659,8 +657,8 @@ header {
   display: inline-block;
   position: absolute;
   top: 49%;
-  left: 16%;
-  width: 27%;
+  left: 11%;
+  width: 37%;
   border-bottom: 1px dashed black;
   transform: rotate(90deg);
 }
@@ -690,8 +688,8 @@ header {
 }
 .timeline .content .timeline-items .schedule-item.timeline .timeline .line.line2 {
   top: 48%;
-  width: 30%;
-  left: 15%;
+  width: 41%;
+  left: 9%;
 }
 .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row {
   display: flex;
@@ -727,6 +725,26 @@ header {
 .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content p {
   font-size: 12px;
   font-style: italic;
+}
+.timeline .content .timeline-items .map-btn {
+  display: block;
+  font-size: 11px;
+  max-width: 80px;
+  width: 100%;
+  text-decoration: none;
+  color: #efede6;
+  background-color: #393934;
+  line-height: 1;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0 2%;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.timeline .content .timeline-items .map-btn:hover {
+  opacity: 0.8;
 }
 @media (max-width: 500px) {
   .timeline .content {
@@ -767,6 +785,11 @@ header {
   }
   .timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row .timeline-content p {
     font-size: 2.4vw;
+  }
+  .timeline .content .timeline-items .map-btn {
+    font-size: 2.2vw;
+    max-width: 16vw;
+    border-radius: 1vw;
   }
 }
 
