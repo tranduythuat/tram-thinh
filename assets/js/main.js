@@ -535,6 +535,29 @@
       related,
     } = data;
 
+    if (confirm === "Yes") {
+      const selectedLocations = document.querySelectorAll('input[name="location"]:checked');
+      if (selectedLocations.length === 0) {
+        let errorMsg = document.getElementById("location-error");
+        if (!errorMsg) {
+          errorMsg = document.createElement("p");
+          errorMsg.id = "location-error";
+          errorMsg.style.cssText = "color: red; font-size: 13px; margin-top: 8px; text-align: center;";
+          document.getElementById("location-group").appendChild(errorMsg);
+        }
+        errorMsg.textContent = "Quý khách vui lòng chọn ít nhất 1 địa điểm tham dự";
+        setTimeout(() => (errorMsg.textContent = ""), 3000);
+        return;
+      }
+    }
+
+    // Lấy danh sách địa điểm đã chọn
+    const locations = confirm === "Yes"
+    ? [...document.querySelectorAll('input[name="location"]:checked')]
+        .map((cb) => cb.value)
+        .join(", ")
+    : "";
+
     // =========================
     // i18n Messages
     // =========================
@@ -583,6 +606,7 @@
         body: new URLSearchParams({
           name,
           confirm,
+          locations,
           guest_number,
           related,
         }),
@@ -629,6 +653,22 @@
   }
 
   function initRSVP() {
+    const confirm = document.querySelectorAll('input[name="confirm"]')
+    confirm.forEach((radio) => {
+      radio.addEventListener("change", function () {
+        const locationGroup = document.getElementById("location-group");
+        if (this.value === "Yes") {
+          locationGroup.classList.remove("hidden");
+        } else {
+          locationGroup.classList.add("hidden");
+        }
+      });
+    })
+    const defaultConfirm = document.querySelector('input[name="confirm"]:checked');
+    if (defaultConfirm && defaultConfirm.value !== "Yes") {
+      document.getElementById("location-group").classList.add("hidden");
+    }
+
     const form = document.forms["rsvpForm"];
     if (form) {
       form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
