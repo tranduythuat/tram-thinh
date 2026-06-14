@@ -728,6 +728,13 @@ header {
   font-size: 12px;
   font-style: italic;
 }
+.timeline .content .timeline-items .schedule-item.timeline .timeline .timeline-row.main .timeline-content {
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+.timeline .content .timeline-items .schedule-item.timeline.date-01-07 {
+  margin-bottom: 5%;
+}
 .timeline .content .timeline-items .map-btn {
   display: block;
   font-size: 11px;
